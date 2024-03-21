@@ -2,6 +2,9 @@ COLONNE DATABASE:
 
 id: SMALLINT, PK, UNIQUE, NOT NULL, AUTO_INCREMENT
 
+if-venduta: TINYINT (booleano), NOT NULL
+if-in-trattativa: TINYINT (booleano), NOT NULL
+
 targa: VARCHAR(8), UNIQUE, NOT NULL
 brand: VARCHAR(30), NOT NULL
 modello: VARCHAR(20), NOT NULL
