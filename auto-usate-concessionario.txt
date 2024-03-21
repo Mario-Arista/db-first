@@ -2,21 +2,25 @@ COLONNE DATABASE:
 
 id: SMALLINT, PK, UNIQUE, NOT NULL, AUTO_INCREMENT
 
-if_venduta: TINYINT (booleano), NOT NULL
-if_in-trattativa: TINYINT (booleano), NOT NULL
+if_venduta: BOOL, NOT NULL
+if_in-trattativa: BOOL, NOT NULL
 
 targa: VARCHAR(8), UNIQUE, NOT NULL
 brand: VARCHAR(30), NOT NULL
 modello: VARCHAR(20), NOT NULL
 tipologia: VARCHAR(20), NOT NULL
 colore: TINYINT, NOT NULL
-kilometraggio: MEDIUMINT
+chilometraggio: MEDIUMINT
+cilindrata: SMALLMINT, NOT NULL
+kilowatt: TINYINT, NOT NULL
+porte: BIT, NOT NULL
+trazione: VARCHAR(15), UNIQUE, NOT NULL
 alimentazione: VARCHAR(20), NOT NULL
 cavalli: SMALLMINT
 
 data_immatricolazione: DATE
-manutezione: TINYINT (booleano), NOT NULL
-tagliandi: TINYINT (booleano), NOT NULL
+manutezione: BOOL, NOT NULL
+tagliandi: BOOL, NOT NULL
 numero_motore: SMALLMINT, NOT NULL
 numero_telaio: SMALLMINT, NOT NULL
 
@@ -25,6 +29,6 @@ nome_ex_proprietario: VARCHAR(50), NOT NULL
 
 prezzo_vendita: MEDIUMINT, NOT NULL
 prezzo_aquisto: MEDIUMINT
-if_sconto: TINYINT (booleano), NOT NULL
-max_sconto: TINYINT, DEFAULT(0)
+if_sconto: BOOL, NOT NULL
+max_sconto: BIT, DEFAULT(0)
 
