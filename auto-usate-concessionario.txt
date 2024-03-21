@@ -1,0 +1,7 @@
+COLONNE DATABASE:
+
+id:
+targa:
+modello:
+brand:
+kilometraggio:
