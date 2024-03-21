@@ -1,7 +1,27 @@
 COLONNE DATABASE:
 
-id:
-targa:
-modello:
-brand:
-kilometraggio:
+id: SMALLINT, PK, UNIQUE, NOT NULL, AUTO_INCREMENT
+
+targa: VARCHAR(8), UNIQUE, NOT NULL
+brand: VARCHAR(30), NOT NULL
+modello: VARCHAR(20), NOT NULL
+tipologia: VARCHAR(20), NOT NULL
+colore: TINYINT, NOT NULL
+kilometraggio: MEDIUMINT
+alimentazione: VARCHAR(20), NOT NULL
+cavalli: SMALLMINT
+
+data-immatricolazione: DATE
+manutezione: TINYINT (booleano), NOT NULL
+tagliandi: TINYINT (booleano), NOT NULL
+numero-motore: SMALLMINT, NOT NULL
+numero-telaio: SMALLMINT, NOT NULL
+
+data-acquisizione: DATE, NOT NULL
+nome-ex-proprietario: VARCHAR(50), NOT NULL
+
+prezzo-vendita: MEDIUMINT, NOT NULL
+prezzo-d'aquisto: MEDIUMINT
+if-sconto: TINYINT (booleano), NOT NULL
+max-sconto: TINYINT, DEFAULT(0)
+
